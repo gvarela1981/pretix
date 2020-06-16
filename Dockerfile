@@ -67,7 +67,7 @@ RUN chmod +x /usr/local/bin/pretix && \
     chown -R pretixuser:pretixuser /pretix /data data && \
 	sudo -u pretixuser make production
 
-USER pretixuser
+USER root
 VOLUME ["/etc/pretix", "/data"]
 EXPOSE 80
 ENTRYPOINT ["pretix"]
